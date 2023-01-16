@@ -11,7 +11,7 @@ inputAltura.addEventListener('keyup', (e) => { // Substituindo vírgula por pont
 });
 
 calcular.addEventListener('click', () => {
-    const result = inputPeso.value / (inputAltura.value * inputAltura.value);
+    const result = inputPeso.value / (Math.pow(inputAltura.value,2));
 
     if(result < 18.5){
         alert(` Seu IMC é de ${result.toFixed(2)}, De acordo com a Organização Mundial da Saúde, seu IMC está abaixo do recomendado para a sua altura.`);
@@ -37,4 +37,6 @@ calcular.addEventListener('click', () => {
         alert(` Seu IMC é de ${result.toFixed(2)}, Obesidade grau III, de acordo com a Organização Mundial da Saúde, seu IMC está acima do recomendado para a sua altura. Tenha uma vida saudável, pratique exercícios!`);
     }
 
-});
+})
+
+console.log(Math.pow(inputAltura,2))
