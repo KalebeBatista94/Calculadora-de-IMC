@@ -16,10 +16,10 @@
 }
 
 .container-items {
+    padding: 1.5em;
     background-color: black;
     color: #fff;
     width: 25%;
-    height: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,17 +47,44 @@
     padding: 0.4em;
 }
 
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button img{
+    display: none;
+    border-radius: 50px;
+    position: absolute;
+    left: 55%;
+    top: 74.5%;
+    width: 60px;
+}
+
 #calcular {
+    margin: 0 auto;
     border: none;
-    width: 100%;
+    width: 10em;
     margin-top: 1.8em;
     font-size: 15px;
     cursor: pointer;
-    width: 50%;
     border-radius: 50px;
     padding: 0.2em;
     font-weight: 700;
-    background-color: blueviolet;
+    background-color: rgb(138, 44, 225);
+}
+
+#text-area {
+    width: 100%;
+    height: 9em;
+    padding: 0.2em;
+    outline: none;
+    font-size: 15px;
+    font-weight: 700;
+    border: 3px solid rgb(138, 44, 225);
+    transition: 1s;
+    display: none;
 }
 
 @media screen and (max-width:960px){
