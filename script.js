@@ -1,18 +1,18 @@
-const inputAltura = document.getElementById('inputAltura');
-const inputPeso = document.getElementById('inputPeso');
-const calcular = document.getElementById('calcular');
+const height = document.getElementById('height');
+const weight = document.getElementById('weight');
+const calculate = document.getElementById('btn-calculate');
 const textArea = document.getElementById('text-area');
-const loadingImage = document.getElementById('loading-image');
+const loading = document.getElementById('c-loader');
 
-inputAltura.addEventListener('keyup', (e) => { // Substituindo vírgula por ponto
+height.addEventListener('keyup', (e) => { // Substituindo vírgula por ponto
     const el = e.target
     if(el.value.includes(',')){
         el.value = el.value.replace(/,/g,'.')
     }
 });
 
-calcular.addEventListener('click', () => {
-    const result = inputPeso.value / (Math.pow(inputAltura.value,2));
+calculate.addEventListener('click', () => {
+    const result = weight.value / (Math.pow(height.value,2));
 
     let text;
 
@@ -40,14 +40,14 @@ calcular.addEventListener('click', () => {
         text = ` Seu IMC é de ${result.toFixed(2)}, Obesidade grau III, de acordo com a Organização Mundial da Saúde, seu IMC está acima do recomendado para a sua altura. Tenha uma vida saudável, pratique exercícios!`;
     }
    
-    loadingImage.style.display = 'unset'
+    loading.style.display = 'unset'
 
-    setInterval(() => {
-        loadingImage.style.display = 'none'
+    const ponteiro = setInterval(() => {
+        loading.style.display = 'none'
         textArea.innerHTML = text;
         textArea.style.display = 'unset';
+        clearInterval(ponteiro)
     }, 2000);
 
-
-})
+});
 

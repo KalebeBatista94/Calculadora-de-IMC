@@ -18,25 +18,30 @@
             <h1>Calcule seu IMC</h1>
             <div class="items">
                 <label for="idade">Idade</label>
-                <input id="inputIdade" type="text" name="idade" class="value" placeholder="Digite sua idade">
+                <input id="age" type="text" name="idade" class="value" placeholder="Digite sua idade">
             </div>
 
             <div class="items">
-                <label for="input">Altura</label>
-                <input id="inputAltura" type="number" step="0.01" name="Altura" class="value" placeholder="Digite sua altura, ex: 1,75" >
+                <label for="altura">Altura</label>
+                <input id="height" type="number" step="0.01" name="Altura" class="value"
+                    placeholder="Digite sua altura, ex: 1,75">
             </div>
 
             <div class="items">
-                <label for="input">Peso</label>
-                <input id="inputPeso" type="number" step="0.01" name="Peso" class="value" placeholder="Digite seu peso, ex: 70">
+                <label for="peso">Peso</label>
+                <input id="weight" type="number" step="0.01" name="Peso" class="value"
+                    placeholder="Digite seu peso, ex: 70">
             </div>
-            <div class="button">
-                <button id="calcular">Calcular</button>
-                <img id="loading-image" src="./assets/loading.gif" width="50px" alt="">
+
+            <div class="calculate">
+                <button id="btn-calculate">Calcular</button>
+                <div id="c-loader" class="c-loader"></div>
             </div>
-            <textarea name="" id="text-area" ></textarea>
+            <textarea name="" id="text-area"></textarea>
+            
         </div>
-    </div>    
+    </div>
 </body>
-    <script src="./script.js"></script>
+<script src="./script.js"></script>
+
 </html>
